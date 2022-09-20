@@ -3,7 +3,7 @@ package com.kuang.eduservice.config;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
+import feign.Logger;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-09-27 15:57
  */
 @Configuration
@@ -39,5 +39,10 @@ public class EduConfig {
         performanceInterceptor.setFormat(true);// 是否格式化代码
         return performanceInterceptor;
     }*/
+
+    @Bean
+    Logger.Level feignLoggerLevel(){
+        return Logger.Level.FULL;
+    }
 
 }

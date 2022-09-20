@@ -17,7 +17,7 @@ import java.util.Map;
  * <p>异常时用JSON代替HTML异常信息<p>
  *
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-11-05 10:01
  */
 public class JsonExceptionHandler extends DefaultErrorWebExceptionHandler {

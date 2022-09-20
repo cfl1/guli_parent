@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description: 主启动类
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-07 21:17
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)

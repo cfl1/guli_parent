@@ -10,7 +10,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
 /**
  * @Description: 统一解决跨域问题
  *  统一配置之后再每个Controller中就不用在加注解了
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-11-05 10:01
  */
 @Configuration

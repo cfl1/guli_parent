@@ -2,7 +2,7 @@ package com.kuang.common.utils;
 
 /**
  * @Description: 状态码类
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-09-27 22:53
  */
 public interface ResultCode {

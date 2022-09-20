@@ -1,5 +1,6 @@
 package com.kuang.eduservice.client;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-11-03 12:31
  */
 @Component

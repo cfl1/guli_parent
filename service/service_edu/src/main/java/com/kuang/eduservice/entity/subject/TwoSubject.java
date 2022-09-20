@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @Description: 二级分类
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-13 19:32
  */
 @ApiModel(value = "Subject添加数据", description = "课程二级分类")

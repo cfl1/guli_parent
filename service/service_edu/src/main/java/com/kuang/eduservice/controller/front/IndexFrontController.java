@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-24 14:10
  */
 @Api(description = "前台查询课程名师")

@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-20 19:15
  */
 @ApiModel(value = "课程最终发布")

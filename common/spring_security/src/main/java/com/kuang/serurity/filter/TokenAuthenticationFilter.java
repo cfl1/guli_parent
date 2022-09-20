@@ -29,7 +29,7 @@ import java.util.List;
  */
 public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
 
-    private TokenManager tokenManager;
+    private final TokenManager tokenManager;
     private RedisTemplate redisTemplate;
 
     public TokenAuthenticationFilter(AuthenticationManager authManager, TokenManager tokenManager, RedisTemplate redisTemplate) {

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-25 15:33
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//取消数据源自动配置

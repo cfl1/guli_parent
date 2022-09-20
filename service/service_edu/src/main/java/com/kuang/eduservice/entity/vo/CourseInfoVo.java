@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-15 20:43
  */
 @ApiModel(value = "Course查询对象", description = "课程管理查询对象封装")

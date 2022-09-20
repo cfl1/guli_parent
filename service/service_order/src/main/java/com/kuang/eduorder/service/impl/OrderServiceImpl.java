@@ -52,7 +52,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setNickname(userInfoOrder.getNickname());
 
         order.setStatus(0);  //订单状态（0：未支付 1：已支付）
-        order.setPayType(1);  //支付类型 ，微信1
+        order.setPayType(1);  //支付类型 ，默认为微信1（当前只对接了微信支付）
 
         baseMapper.insert(order);
 

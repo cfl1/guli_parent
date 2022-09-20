@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-21 12:43
  */
 @ApiModel(value = "Course查询对象", description = "课程查询对象封装")

@@ -101,7 +101,8 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         member.setNickname(nickname);
         member.setPassword(MD5.encrypt(password));//密码需要加密的
         member.setIsDisabled(false);//用户不禁用
-        member.setAvatar("https://guli-edu-20201.oss-cn-beijing.aliyuncs.com/2020/10/08/3a6bf3d4a85f415693e062db5fb17df8file.png");
+        //设置默认的头像
+        member.setAvatar("https://gulistu-edu-1010.oss-cn-beijing.aliyuncs.com/2022/09/15/Snipaste_2022-09-16_14-34-45.jpg");
         baseMapper.insert(member);
     }
 

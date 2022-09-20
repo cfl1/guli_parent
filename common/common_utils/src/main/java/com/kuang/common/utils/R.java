@@ -1,5 +1,6 @@
 package com.kuang.common.utils;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -7,7 +8,7 @@ import java.util.Map;
 
 /**
  * @Description: 统一返回的结果类
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-09-27 22:55
  */
 @Data

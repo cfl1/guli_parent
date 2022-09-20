@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-28 11:36
  */
 @Api(description = "前端微信扫码登录")
@@ -134,7 +134,7 @@ public class WxApiController {
                 baseUrl,
                 ConstantWxUtils.WX_OPEN_APP_ID,
                 redirectUrl,
-                "atguigu"
+                "zhixue"
         );
 
         //重定向到请求微信地址里面

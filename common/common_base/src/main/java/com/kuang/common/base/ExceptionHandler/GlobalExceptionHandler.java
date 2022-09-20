@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Description: 异常处理类
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-09-28 17:04
  */
 @ControllerAdvice

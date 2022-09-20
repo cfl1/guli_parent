@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-22 9:30
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//默认不去加载数据库配置

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-30 9:45
  */
 @ApiModel(value="CourseWebVoOrder对象", description="课程表")

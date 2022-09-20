@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Description: 课程管理
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-09-27 15:57
  */
 @SpringBootApplication

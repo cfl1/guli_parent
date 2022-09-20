@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-19 12:25
  */
 @ApiModel(value = "章节封装类",description = "章节封装类")

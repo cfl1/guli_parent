@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-11-02 19:23
  */
 @ApiModel(value="UcenterMember对象", description="会员表")

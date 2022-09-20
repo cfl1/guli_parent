@@ -3,6 +3,7 @@ package com.kuang.eduservice.controller.front;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kuang.common.utils.JwtUtils;
 import com.kuang.common.utils.R;
+import com.kuang.common.utils.ResultCode;
 import com.kuang.common.utils.ordervo.CourseWebVoOrder;
 import com.kuang.eduservice.client.OrdersClient;
 import com.kuang.eduservice.entity.EduCourse;
@@ -15,21 +16,23 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.transform.Source;
 import java.util.List;
 import java.util.Map;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-29 15:02
  */
 @Api(description = "课程管理前端")
 @RestController
 @RequestMapping("/eduservice/coursefront")
-//@CrossOrigin
+// @CrossOrigin
 public class CourseFrontController {
 
     @Autowired
@@ -46,7 +49,7 @@ public class CourseFrontController {
     public R getCourseFrontList(@PathVariable long page, @PathVariable long limit,
                                 @RequestBody(required = false) CourseFrontVo courseFrontVo) {
         Page<EduCourse> pageCourse = new Page<>(page, limit);
-        Map<String,Object> map = courseService.getCourseFrontList(pageCourse,courseFrontVo);
+        Map<String, Object> map = courseService.getCourseFrontList(pageCourse, courseFrontVo);
         //返回封装的数据
         return R.ok().data(map);
     }
@@ -61,11 +64,17 @@ public class CourseFrontController {
         List<ChapterVo> chapterVideoList = chapterService.getChapterVideoByCourseId(courseId);
 
         //根据课程id和用户id查询当前课程是否已经支付过
-        //报错：feign.FeignException$NotFound: status 404 reading OrdersClient#isBuyCourse(String,String)
         String memberIdToken = JwtUtils.getMemberIdByJwtToken(request);
+        if (StringUtils.isEmpty(memberIdToken)) {
+            R.error().setCode(ResultCode.UNAUTHORIZED);
+        }
+
+        System.out.println(ordersClient);
+
+        //报错：feign.FeignException$NotFound: status 404 reading OrdersClient#isBuyCourse(String,String)
         boolean buyCourse = ordersClient.isBuyCourse(courseId, memberIdToken);
 
-        return R.ok().data("courseWebVo",courseWebVo).data("chapterVideoList",chapterVideoList).data("isBuy",buyCourse);
+        return R.ok().data("courseWebVo", courseWebVo).data("chapterVideoList", chapterVideoList).data("isBuy", buyCourse);
     }
 
     @ApiOperation(value = "根据课程id查询课程信息")
@@ -73,7 +82,7 @@ public class CourseFrontController {
     public CourseWebVoOrder getCourseInfoOrder(@PathVariable String id) {
         CourseWebVo courseInfo = courseService.getBaseCourseInfo(id);
         CourseWebVoOrder courseWebVoOrder = new CourseWebVoOrder();
-        BeanUtils.copyProperties(courseInfo,courseWebVoOrder);
+        BeanUtils.copyProperties(courseInfo, courseWebVoOrder);
         return courseWebVoOrder;
     }
 }

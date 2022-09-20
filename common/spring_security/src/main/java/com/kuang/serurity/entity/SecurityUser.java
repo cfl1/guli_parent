@@ -38,6 +38,7 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        //把permissionValueList中字符串类型的权限信息转换成GrantedAuthority对象存入authorities中
         Collection<GrantedAuthority> authorities = new ArrayList<>();
         for(String permissionValue : permissionValueList) {
             if(StringUtils.isEmpty(permissionValue)){

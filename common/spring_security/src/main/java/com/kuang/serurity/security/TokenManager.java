@@ -49,7 +49,7 @@ public class TokenManager {
         String user = Jwts.parser().setSigningKey(tokenSignKey).parseClaimsJws(token).getBody().getSubject();
         return user;
     }
-
+ 
     public void removeToken(String token) {
         //jwttoken无需删除，客户端扔掉即可。
     }

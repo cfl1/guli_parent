@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-11-01 16:20
  */
 @FeignClient(name = "service-ucenter",fallback = UcenterFileDegradeFeginClient.class)

@@ -22,7 +22,7 @@ import java.time.Duration;
 
 /**
  * @Description: redis配置文件
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-24 20:46
  */
 @EnableCaching //开启缓存

@@ -9,9 +9,24 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.kuang.eduservice.client.OrdersClient;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Resource;
 
 public class CodeGenerator {
+
+    @Autowired
+    private OrdersClient ordersClient;
+
+    @Test
+    public void test() {
+        String courseId = "1571072526375817218";
+        String memberIdToken = "1571100005123604481";
+        boolean buyCourse = ordersClient.isBuyCourse(courseId, memberIdToken);
+        System.out.println(buyCourse);
+    }
 
     @Test
     public void run() {

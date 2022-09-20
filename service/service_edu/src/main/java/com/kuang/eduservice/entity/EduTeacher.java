@@ -48,7 +48,7 @@ public class EduTeacher implements Serializable {
     @ApiModelProperty(value = "手机号")
     private String phonenumber;
 
-    @ApiModelProperty(value = "邮箱")
+    @ApiModelProperty(value =                               "邮箱")
     private String email;
 
     @ApiModelProperty(value = "状态（0-启用 1-停用）")

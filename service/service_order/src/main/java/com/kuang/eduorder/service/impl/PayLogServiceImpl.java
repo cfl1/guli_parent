@@ -51,7 +51,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
             m.put("out_trade_no", orderNo); //订单号
             m.put("total_fee", order.getTotalFee().multiply(new BigDecimal("100")).longValue()+"");//价格
             m.put("spbill_create_ip", "127.0.0.1");
-            m.put("notify_url", "http://guli.shop/api/order/weixinPay/weixinNotify\n");//回调地址
+            m.put("notify_url", "https://order.chenfl.cn/orderPay/pay/callback");//回调地址
             m.put("trade_type", "NATIVE");//支付类型
 
             //3 发送httpclient请求，传递参数xml格式，微信支付提供的固定的地址

@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @Description:
- * @Author: StarSea99
+ * @Author: chenfl
  * @Date: 2020-10-22 20:58
  */
 @FeignClient(name = "service-vod",fallback = VodFileDegradeFeignClient.class)
