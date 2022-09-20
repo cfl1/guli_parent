@@ -34,6 +34,8 @@ public enum ResultCodeEnum {
 
     PAY_RUN(220, "支付中"),
     CANCEL_ORDER_FAIL(221, "取消订单失败"),
+
+    SEND_SMS_FAILED(222, "发送短信失败"),
     ;
 
     private Integer code;

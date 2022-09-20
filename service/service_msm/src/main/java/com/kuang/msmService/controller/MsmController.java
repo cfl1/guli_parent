@@ -36,7 +36,6 @@ public class MsmController {
     public R sendMsm(@PathVariable String phone) {
         //从redis中获取验证码，如果获取到就直接返回
         String code = redisTemplate.opsForValue().get(phone);
-        System.out.println("1111"+code);
         if (!StringUtils.isEmpty(code)) {
             return R.ok();
         }

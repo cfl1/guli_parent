@@ -9,6 +9,8 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.exceptions.ServerException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
+import com.kuang.common.base.ExceptionHandler.GuliException;
+import com.kuang.common.utils.ResultCodeEnum;
 import com.kuang.msmService.service.MsmService;
 import com.kuang.msmService.utils.ConstantPropertiesUtils;
 import org.springframework.stereotype.Service;
@@ -31,8 +33,6 @@ public class MsmServiceIml implements MsmService {
 
         DefaultProfile profile = DefaultProfile.getProfile(ConstantPropertiesUtils.REGION_Id, ConstantPropertiesUtils.ACCESS_KEY_ID, ConstantPropertiesUtils.SECRECT);
         IAcsClient client = new DefaultAcsClient(profile);
-        System.out.println(ConstantPropertiesUtils.REGION_Id);
-        System.out.println(ConstantPropertiesUtils.ACCESS_KEY_ID);
 
         CommonRequest request = new CommonRequest();
         request.setSysMethod(MethodType.POST);
@@ -53,6 +53,7 @@ public class MsmServiceIml implements MsmService {
             return success;
         }catch(Exception e) {
             e.printStackTrace();
+            new GuliException(ResultCodeEnum.SEND_SMS_FAILED);
             return false;
         }
     }
