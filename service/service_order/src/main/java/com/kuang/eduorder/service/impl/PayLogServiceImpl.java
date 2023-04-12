@@ -44,8 +44,8 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
 
             //2 使用map设置生成二维码需要参数
             Map m = new HashMap();
-            m.put("appid","wx74862e0dfcf69954");//关联的公众号appid
-            m.put("mch_id", "1558950191");//商户号
+            m.put("appid","******");//关联的公众号appid
+            m.put("mch_id", "******");//商户号
             m.put("nonce_str", WXPayUtil.generateNonceStr());//生成随机字符串
             m.put("body", order.getCourseTitle()); //课程标题
             m.put("out_trade_no", orderNo); //订单号
@@ -57,7 +57,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
             //3 发送httpclient请求，传递参数xml格式，微信支付提供的固定的地址
             HttpClient client = new HttpClient("https://api.mch.weixin.qq.com/pay/unifiedorder");
             //设置xml格式的参数
-            client.setXmlParam(WXPayUtil.generateSignedXml(m,"T6m9iK73b0kn9g5v426MKfHQH7X8rKwb"));
+            client.setXmlParam(WXPayUtil.generateSignedXml(m,"******"));
             client.setHttps(true);
             //执行post请求发送
             client.post();
@@ -89,14 +89,14 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
         try {
             //1、封装参数
             Map m = new HashMap<>();
-            m.put("appid", "wx74862e0dfcf69954");
-            m.put("mch_id", "1558950191");
+            m.put("appid", "******");
+            m.put("mch_id", "******");
             m.put("out_trade_no", orderNo);
             m.put("nonce_str", WXPayUtil.generateNonceStr());
 
             //2 发送httpclient
             HttpClient client = new HttpClient("https://api.mch.weixin.qq.com/pay/orderquery");
-            client.setXmlParam(WXPayUtil.generateSignedXml(m,"T6m9iK73b0kn9g5v426MKfHQH7X8rKwb"));
+            client.setXmlParam(WXPayUtil.generateSignedXml(m,"******"));
             client.setHttps(true);
             client.post();
 
